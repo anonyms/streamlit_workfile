@@ -2,10 +2,10 @@ version: '3.7'
 
 services:
     app:
-        build: ./
-        command: streamlit run app/main.py --server.port 8501
+        build: .
         volumes:
-            - ./:/usr/src/app
+            - ./app:/usr/src/app
         ports:
             - 8501:8501
-        image: yourstreamlitapp:latest
+        restart: always
+        command: streamlit run main.py --server.port 8501
