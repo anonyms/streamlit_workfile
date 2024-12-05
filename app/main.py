@@ -40,7 +40,7 @@ if selected == "Home":
 
 if selected == "Stock":
     st.title("Stock info to come")
-    ticker = st.selectbox("Pick Stock Ticker",('^OSEAX','AMZN','AFG.OL','BMA.OL','DNB.OL','EQNR.OL','EPR.OL','GJF.OL','KID.OL','MOWI.OL','PARB.OL'))
+    ticker = st.selectbox("Pick Stock Ticker",('^OSEAX','AMZN','AFG.OL','BMA.OL','DNB.OL','EQNR.OL','EPR.OL','GJF.OL','KID.OL','MOWI.OL','PARB.OL','BETS-B.ST'))
     if st.button("Get Price Chart"):
          st.write(ticker)
          stock_data = yf.download(ticker, start = '2020-01-01')
@@ -68,8 +68,9 @@ if selected == "Stock":
 if selected == "Fun":
     st.write("Having Fun I Hope")
 
+
 if selected == "DaysofStreamlit":
-    st.write("Ny dag nye muligheter")
+    st.write("Ny DAG nye muligheter")
 
     st.header('Day 5: st.write')
     st.write("Hello, simple write :sunglasses:")
